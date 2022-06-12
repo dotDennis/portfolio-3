@@ -1,5 +1,8 @@
 @import url(global.css);
 
+
+
+
 .button__return {
   margin-top: 7px; /* magic number to align with toggle button*/
   font-size: 2rem;
@@ -42,6 +45,9 @@
 }
 
 .container__image {
+  max-height: 575px;
+  object-fit: cover;
+  object-position: top;
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 5px;
@@ -71,4 +77,29 @@
 .custom-image {
   max-height: 600px;
   object-fit: cover;
+}
+
+.container__links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+h3 {
+  color: var(--tone);
+}
+
+.cta-scroll {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.cta-scroll span {
+  font-size: 3rem;
+}
+
+.lead {
+  text-align: center;
 }

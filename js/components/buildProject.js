@@ -13,20 +13,20 @@ export function projectHtml(project) {
   }
 
   return `
-      <section class="w-50 container__hero container__hero--project d-flex flex-column justify-content-center">
+      <section class="container">
         <h1>${project.title}</h1>
         <p class="lead">${project.description}</p>
         <a class="cta-scroll" href="#introduction"><span class="material-icons">keyboard_arrow_down</span></a>
       </section>
-      <div class="project__image mb-5">
-        <img id="introduction" src="${project.image_url}" alt="${project.image_alt}" />
+      <div class="container__image--container">
+        <img class="container__image" src="${project.image_url}" alt="${project.image_alt}" />
         ${image_link}
         </div>
-      <section class="container container__introduction">
+      <section class="container" id="introduction">
         <h2>Introduction</h2>
         <p>${project.introduction}</p>
       </section>
-      <section class="container container__features">
+      <section class="container">
         <h2>Features</h2>
         <p>${features.features_intro}</p>
         <h3>${features.feature_title_1}</h3>
@@ -36,7 +36,7 @@ export function projectHtml(project) {
         <h3>${features.feature_title_3}</h3>
         <p>${features.feature_desc_3}</p>
       </section>
-      <div class="container__links d-flex justify-content-center mt-5 pt-3">
+      <div class="container__links">
         ${text_link}<a href="${project.source_url}">View Source</a><a href="/">Return Home</a>
       </div>`;
 }
